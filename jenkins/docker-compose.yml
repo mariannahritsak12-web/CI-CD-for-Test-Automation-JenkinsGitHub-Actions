@@ -42,3 +42,5 @@ networks:
 volumes:
   jenkins-docker-certs:
   jenkins-data:
+    external: true
+    name: edfdae60835a9cbbaafb1d8e9c15ef3d672bbcf7ae461a22d03c3945849a86eb
