@@ -80,7 +80,7 @@ jobs:
           echo '```' >> $GITHUB_STEP_SUMMARY
 
           echo "report<<EOF" >> $GITHUB_OUTPUT
-          cat full_output.txt >> $GITHUB_OUTPUT
+          cat test-output.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Publish Frontend Test Results
@@ -114,5 +114,5 @@ jobs:
           body: |
             ## Frontend Code Coverage Report
             ``` 
-            ${{ needs.unit-tests-backend.outputs.coverage }}
+            ${{ needs.unit-tests-frontend.outputs.coverage }}
             ```
